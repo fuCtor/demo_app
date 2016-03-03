@@ -3,15 +3,15 @@
   %head
     %title Commit viewer
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-
     = stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity: 'sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin: 'anonymous'
 
     = csrf_meta_tags
   %body
     = render 'layouts/header'
     .container
+      = render 'layouts/alerts'
       = yield
       = render 'layouts/footer'
 
-    = javascript_include_tag  '//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', integrity: 'sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', crossorigin: 'anonymous'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+

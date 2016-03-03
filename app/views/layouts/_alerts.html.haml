@@ -1,0 +1,3 @@
+#alerts
+  - flash.each do |k, v|
+    .alert{ role: 'alert', class: k == 'alert' ? 'alert-danger' : 'alert-success' }= v

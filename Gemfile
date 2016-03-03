@@ -43,6 +43,9 @@ gem 'russian'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'newrelic_rpm'
+gem 'bootstrap3-rails'
+gem 'bootstrap-x-editable-rails'
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'pry'

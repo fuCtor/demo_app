@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :commits, only: %i(index create update)
+  get 'users/update'
+
+  resources :commits, only: %i(index create)
+  resources :users,   only: %i(update)
   root to: 'commits#index'
 end

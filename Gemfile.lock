@@ -53,6 +53,10 @@ GEM
     bootstrap-kaminari-views (0.0.5)
       kaminari (>= 0.13)
       rails (>= 3.1)
+    bootstrap-x-editable-rails (1.5.1.1)
+      railties (>= 3.0)
+    bootstrap3-rails (3.2.0)
+      rails (>= 4.0.0)
     builder (3.2.2)
     byebug (8.2.2)
     capistrano (3.2.1)
@@ -245,6 +249,8 @@ PLATFORMS
 DEPENDENCIES
   annotate
   bootstrap-kaminari-views
+  bootstrap-x-editable-rails
+  bootstrap3-rails
   byebug
   capistrano (~> 3.2.0)
   capistrano-rails (~> 1.1)
