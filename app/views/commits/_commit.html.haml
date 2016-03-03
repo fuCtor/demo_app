@@ -1,0 +1,6 @@
+%tr
+  %td.sha
+    %span.label.label-info= commit.sha
+  %td.message= commit.message
+  %td.commited= l commit.commited_at, format: :short
+  %td.user{ data: { user: commit.user.try(:id) } }= commit.user.try(:name)

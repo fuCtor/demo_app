@@ -1,0 +1,23 @@
+.row
+  .col-md-12
+    .well
+      = render 'form'
+
+.row
+  .col-md-12
+    = paginate @commits, :theme => 'twitter-bootstrap-3'
+
+.row
+  .col-md-12
+    %table.table
+      %thead
+        %th.sha= Commit.human_attribute_name('sha')
+        %th.message= Commit.human_attribute_name('message')
+        %th.commited= Commit.human_attribute_name('commited_at')
+        %th.user= Commit.human_attribute_name('user')
+      %tbody
+        = render @commits
+
+.row
+  .col-md-12
+    = paginate @commits, :theme => 'twitter-bootstrap-3'

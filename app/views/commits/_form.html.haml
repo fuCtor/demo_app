@@ -1,0 +1,17 @@
+.row
+  .col-md-6
+    = form_for :import, url: commits_path, html: { class: 'form-inline'} do |f|
+      .form-group
+        = f.text_field :user, placeholder: 'User', class: 'form-control'
+      .form-group
+        = f.text_field :repo, placeholder: 'Repo', class: 'form-control'
+      .form-group
+        = submit_tag 'Import', class: 'btn btn-primary'
+  .col-md-6
+    .pull-right
+      = form_tag commits_path, method: 'get', enforce_utf8: false, class: 'form-inline' do
+        .input-group
+          = search_field_tag :email, '', placeholder: 'Email', class: 'form-control'
+          .input-group-btn
+            %button.btn.btn-default
+              %i.glyphicon.glyphicon-search

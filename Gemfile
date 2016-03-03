@@ -40,6 +40,8 @@ end
 
 gem 'hamlit'
 gem 'russian'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 gem 'newrelic_rpm'
 group :development, :test do
   gem 'rspec-rails'
