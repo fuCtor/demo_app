@@ -8,11 +8,12 @@ class CommitsController < ApplicationController
   end
 
   def create
-    ImportService.run import_params[:user], import_params[:repo]
-    redirect_to({ action: :index }, notice: 'Imported')
-  end
+    if ImportService.run(import_params[:user], import_params[:repo]).present?
+      redirect_to({ action: :index }, notice: 'Imported'  )
+    else
+      redirect_to({ action: :index }, alert: 'Import error' )
+    end
 
-  def update
   end
 
   private
