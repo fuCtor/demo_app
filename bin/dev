@@ -1,0 +1,2 @@
+#!/bin/sh  
+bin/bundle exec foreman start --procfile=./Procfile.dev
