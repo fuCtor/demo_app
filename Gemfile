@@ -53,6 +53,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'quiet_assets'
   gem 'annotate'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :development do

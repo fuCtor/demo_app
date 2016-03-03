@@ -28,7 +28,9 @@ module ImportService
           end
         end
       end
-
     end
+
+  rescue URI::InvalidURIError
+    false
   end
 end
