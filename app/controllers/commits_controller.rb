@@ -21,7 +21,7 @@
 
 class CommitsController < ApplicationController
   def index
-    @commits = Commit
+    @commits = Commit.includes(:user)
     if params[:email]
       @commits = @commits.for_user params[:email]
     end
